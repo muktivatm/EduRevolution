@@ -6,7 +6,14 @@ import { Plus, FileText, CheckCircle, Search, Filter, Eye, X, Upload } from 'luc
 const TeacherAssignments = () => {
     const [activeTab, setActiveTab] = useState('created');
     const [showCreateModal, setShowCreateModal] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const navigate = useNavigate();
+
+    React.useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     // Mock Data
     const createdAssignments = [
@@ -86,13 +93,15 @@ const TeacherAssignments = () => {
 
     return (
         <DashboardLayout role="teacher">
-            <div className="animate-fade-in" style={{ paddingBottom: '80px', maxWidth: '800px', margin: '0 auto' }}>
+            <div className="animate-fade-in" style={{ paddingBottom: isMobile ? '100px' : '80px', maxWidth: '800px', margin: '0 auto', padding: isMobile ? '0 1rem' : '0' }}>
 
-                {/* Header Section */}
-                <div style={{ marginBottom: '2rem' }}>
-                    <h1 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>Homework</h1>
-                    <p style={{ color: '#6b7280' }}>Manage assignments and review student submissions.</p>
-                </div>
+                {/* Header Section - Hide on Mobile */}
+                {!isMobile && (
+                    <div style={{ marginBottom: '2rem' }}>
+                        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>Homework</h1>
+                        <p style={{ color: '#6b7280' }}>Manage assignments and review student submissions.</p>
+                    </div>
+                )}
 
                 {/* Create Assignment Button (Hero) */}
                 <button
@@ -100,23 +109,23 @@ const TeacherAssignments = () => {
                     className="glass-card"
                     style={{
                         width: '100%',
-                        padding: '1.5rem',
+                        padding: isMobile ? '1rem' : '1.5rem',
                         background: 'var(--gradient-primary)',
                         border: 'none',
                         color: 'white',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: isMobile ? '0.75rem' : '1rem',
                         cursor: 'pointer',
-                        marginBottom: '2rem',
+                        marginBottom: isMobile ? '1.5rem' : '2rem',
                         transition: 'transform 0.2s',
                         borderRadius: '16px'
                     }}
                     onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
                     onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
                 >
-                    <div style={{ background: 'rgba(255,255,255,0.2)', padding: '0.5rem', borderRadius: '12px' }}>
-                        <Plus size={32} />
+                    <div style={{ background: 'rgba(255,255,255,0.2)', padding: isMobile ? '0.4rem' : '0.5rem', borderRadius: '12px' }}>
+                        <Plus size={isMobile ? 24 : 32} />
                     </div>
-                    <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Assign Homework</span>
+                    <span style={{ fontSize: isMobile ? '1.1rem' : '1.5rem', fontWeight: 'bold' }}>Assign Homework</span>
                 </button>
 
                 {/* Creation Modal */}
