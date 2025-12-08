@@ -101,7 +101,7 @@ const TeacherAssignments = () => {
                     style={{
                         width: '100%',
                         padding: '1.5rem',
-                        background: 'linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%)',
+                        background: 'var(--gradient-primary)',
                         border: 'none',
                         color: 'white',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem',
@@ -180,12 +180,12 @@ const TeacherAssignments = () => {
                                 borderRadius: '12px',
                                 border: 'none',
                                 background: activeTab === tab ? '#eff6ff' : 'transparent',
-                                color: activeTab === tab ? '#2563eb' : '#6b7280',
+                                color: activeTab === tab ? 'var(--primary-theme)' : '#6b7280',
                                 fontWeight: activeTab === tab ? '700' : '500',
                                 cursor: 'pointer',
                                 whiteSpace: 'nowrap',
                                 transition: 'all 0.2s',
-                                borderBottom: activeTab === tab ? '2px solid #2563eb' : '2px solid transparent'
+                                borderBottom: activeTab === tab ? '2px solid var(--primary-theme)' : '2px solid transparent'
                             }}
                         >
                             {tab === 'created' && 'Created by you'}
@@ -199,7 +199,7 @@ const TeacherAssignments = () => {
                 <div style={{ display: 'grid', gap: '1rem' }}>
 
                     {activeTab === 'created' && createdAssignments.map((item) => (
-                        <div key={item.id} className="glass-card" style={{ padding: '1.25rem', borderLeft: '4px solid #3b82f6' }}>
+                        <div key={item.id} className="glass-card" style={{ padding: '1.25rem', borderLeft: '4px solid var(--primary-theme)' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                                 <span style={{ fontSize: '0.9rem', fontWeight: 'bold', textDecoration: 'underline' }}>{item.class}</span>
                                 <span style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>{item.subject}</span>
@@ -213,7 +213,7 @@ const TeacherAssignments = () => {
                                 <div>
                                     <p style={{ fontSize: '0.9rem', fontWeight: '500', color: '#374151' }}>submission pending - {item.submissionCount} student</p>
                                     <div style={{ width: '150px', height: '6px', background: '#e5e7eb', borderRadius: '3px', marginTop: '0.25rem' }}>
-                                        <div style={{ width: '33%', height: '100%', background: '#3b82f6', borderRadius: '3px' }}></div>
+                                        <div style={{ width: '33%', height: '100%', background: 'var(--primary-theme)', borderRadius: '3px' }}></div>
                                     </div>
                                 </div>
                                 <div style={{ textAlign: 'right' }}>

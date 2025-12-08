@@ -1,5 +1,5 @@
 export const BRAND = {
     name: "Shubham Classes",
-    color: "#130be4ff",
+    color: "hsla(0, 100%, 50%, 1.00)",
     phone: "+91 98765 43210"
 };

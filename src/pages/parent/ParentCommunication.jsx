@@ -293,8 +293,8 @@ const ParentCommunication = () => {
                             <div style={{ marginBottom: '1rem', padding: '2rem', background: '#e9edef', borderRadius: '50%' }}>
                                 <Send size={48} color="#8696a0" />
                             </div>
-                            <h2 style={{ fontSize: '2rem', fontWeight: '300', marginBottom: '1rem' }}>WhatsApp Web</h2>
-                            <p style={{ fontSize: '0.9rem', color: '#667781' }}>Send and receive messages without keeping your phone online.</p>
+                            <h2 style={{ fontSize: '2rem', fontWeight: '300', marginBottom: '1rem' }}>Direct Chat</h2>
+                            <p style={{ fontSize: '0.9rem', color: '#667781' }}>Send and receive messages without hesitation.</p>
                             <p style={{ fontSize: '0.9rem', color: '#667781', marginTop: '0.5rem' }}>Select a chat to start messaging.</p>
                         </div>
                     )}

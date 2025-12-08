@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, BookOpen } from 'lucide-react';
 import { BRAND } from '../../branding';
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
                     <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
-                            <div style={{ width: '32px', height: '32px', background: 'white', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary-blue)', fontWeight: 'bold' }}>E</div>
+                            <div style={{ width: '32px', height: '32px', background: 'white', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary-blue)', fontWeight: 'bold' }}><BookOpen size={20} /></div>
                             <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{BRAND.name}</span>
                         </div>
                         <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '1.5rem' }}>

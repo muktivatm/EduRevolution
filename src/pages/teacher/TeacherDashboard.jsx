@@ -55,9 +55,9 @@ const TeacherDashboard = () => {
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: isMobile ? '1rem' : '2rem' }}>
                     <h1 style={{ fontSize: isMobile ? '1.5rem' : '1.8rem', fontWeight: 'bold', color: '#111827' }}>My Classes</h1>
-                    <button className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: isMobile ? '0.5rem 1rem' : '0.6rem 1.2rem', borderRadius: '30px', fontSize: isMobile ? '0.9rem' : '1rem' }}>
+                    {/* <button className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: isMobile ? '0.5rem 1rem' : '0.6rem 1.2rem', borderRadius: '30px', fontSize: isMobile ? '0.9rem' : '1rem' }}>
                         <UserPlus size={isMobile ? 16 : 18} /> Add Class
-                    </button>
+                    </button> */}
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: isMobile ? '0.75rem' : '1.5rem' }}>

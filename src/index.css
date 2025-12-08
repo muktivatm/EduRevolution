@@ -158,6 +158,24 @@ button {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   :root {

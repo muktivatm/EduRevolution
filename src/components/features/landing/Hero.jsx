@@ -35,20 +35,28 @@ const Hero = () => {
 
             <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
                 <div className="hero-content animate-fade-in">
-                    <div style={{
+                    <div className="animate-pulse" style={{
                         display: 'inline-flex',
                         alignItems: 'center',
-                        gap: '0.5rem',
-                        background: 'rgba(16, 185, 129, 0.1)',
-                        color: 'var(--color-secondary-green)',
-                        padding: '0.5rem 1rem',
-                        borderRadius: '20px',
+                        gap: '0.75rem',
+                        background: 'white',
+                        border: '1px solid var(--primary-theme)',
+                        color: 'var(--primary-theme)',
+                        padding: '0.6rem 1.25rem',
+                        borderRadius: '50px',
                         marginBottom: '1.5rem',
                         fontWeight: '600',
-                        fontSize: '0.9rem'
+                        fontSize: '0.95rem',
+                        boxShadow: '0 4px 15px rgba(0,0,0,0.05)'
                     }}>
-                        <span style={{ width: '8px', height: '8px', background: 'var(--color-secondary-green)', borderRadius: '50%' }}></span>
-                        Best Education Platform in Ahemdabad
+                        <span style={{
+                            width: '10px',
+                            height: '10px',
+                            background: 'var(--primary-theme)',
+                            borderRadius: '50%',
+                            boxShadow: '0 0 0 2px rgba(255,255,255,1), 0 0 0 4px var(--primary-theme)'
+                        }}></span>
+                        Best Coaching Institute in Vadodara
                     </div>
 
                     <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Brain, Activity, MessageCircle, Trophy } from 'lucide-react';
+import { BRAND } from '../../../branding';
 
 const features = [
     {
@@ -37,7 +38,7 @@ const Features = () => {
         <section className="section-padding" style={{ background: 'white' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Why Choose <span className="text-gradient">EduRevolution</span>?</h2>
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Why Choose <span className="text-gradient">{BRAND.name}</span>?</h2>
                     <p style={{ color: 'var(--color-text-light)', maxWidth: '600px', margin: '0 auto' }}>
                         We combine technology and pedagogy to create an ecosystem where every student thrives.
                     </p>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { User, Mail, Phone, Lock, ArrowRight, CheckCircle } from 'lucide-react';
 import Navbar from '../components/layout/Navbar';
+import { BRAND } from '../branding';
 
 const RegisterPage = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -55,7 +56,7 @@ const RegisterPage = () => {
                             </div>
 
                             <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1.5rem', borderRadius: '12px', marginTop: '2rem' }}>
-                                <p style={{ fontStyle: 'italic', fontSize: '0.9rem', marginBottom: '0.5rem' }}>"EduRevolution changed the way I study. My grades improved by 40% in just 3 months!"</p>
+                                <p style={{ fontStyle: 'italic', fontSize: '0.9rem', marginBottom: '0.5rem' }}>"{BRAND.name} changed the way I study. My grades improved by 40% in just 3 months!"</p>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                                     <div style={{ width: '32px', height: '32px', background: 'white', borderRadius: '50%' }}></div>
                                     <div>

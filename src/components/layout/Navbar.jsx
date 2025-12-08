@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, BookOpen } from 'lucide-react';
 import { BRAND } from '../../branding';
 
 const Navbar = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
                     fontWeight: 'bold',
                     fontSize: '1.5rem',
                     boxShadow: '0 4px 10px rgba(30, 58, 138, 0.3)'
-                }}>E</div>
+                }}><BookOpen size={24} /></div>
                 <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary-blue)', fontFamily: 'var(--font-header)' }}>{BRAND.name}</span>
             </Link>
 
@@ -50,9 +50,9 @@ const Navbar = () => {
             {!isMobile ? (
                 <div className="desktop-menu" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
                     <Link to="/" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Home</Link>
-                    <Link to="/about" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>About Us</Link>
-                    <Link to="/features" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Features</Link>
-                    <Link to="/pricing" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Pricing</Link>
+                    <span style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s', cursor: 'pointer' }}>About Us</span>
+                    <span style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s', cursor: 'pointer' }}>Features</span>
+                    <span style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s', cursor: 'pointer' }}>Pricing</span>
 
                     <button onClick={() => setLang(lang === 'EN' ? 'HI' : 'EN')} style={{
                         background: 'rgba(255,255,255,0.5)',

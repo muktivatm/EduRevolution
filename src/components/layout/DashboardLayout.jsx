@@ -175,7 +175,7 @@ const DashboardLayout = ({ children, role = 'student' }) => {
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             color: 'white', fontWeight: 'bold', fontSize: '1.5rem',
                             boxShadow: '0 4px 10px rgba(37, 99, 235, 0.2)'
-                        }}>E</div>
+                        }}><BookOpen size={24} /></div>
                         <span style={{
                             fontSize: '1.25rem',
                             fontWeight: 'bold',
@@ -307,7 +307,7 @@ const DashboardLayout = ({ children, role = 'student' }) => {
                             {/* Mobile Header Title */}
                             {isMobile && (
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                    <div style={{ width: '32px', height: '32px', background: 'var(--gradient-primary)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>E</div>
+                                    <div style={{ width: '32px', height: '32px', background: 'var(--gradient-primary)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}><BookOpen size={20} /></div>
                                     <span style={{ fontWeight: 'bold', fontSize: '1.1rem', color: 'var(--color-primary-blue)' }}>{BRAND.name}</span>
                                 </div>
                             )}
