@@ -280,83 +280,96 @@ const DashboardLayout = ({ children, role = 'student' }) => {
                 transition: 'margin-left 0.3s ease',
                 minHeight: '100vh'
             }}>
-                {/* Top Navigation Bar - Hidden for specific routes like Communication */}
-                {location.pathname !== '/parent/communication' && (
-                    <header style={{
-                        background: 'rgba(255, 255, 255, 0.8)',
-                        backdropFilter: 'blur(10px)',
-                        padding: '1rem 2rem',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        position: 'sticky',
-                        top: 0,
-                        zIndex: 40,
-                        borderBottom: '1px solid rgba(0,0,0,0.05)'
-                    }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            {!isMobile && (
-                                <button
-                                    onClick={() => setSidebarOpen(!isSidebarOpen)}
-                                    style={{ background: 'none', border: 'none', color: 'var(--color-text-light)' }}
-                                >
-                                    <Menu size={24} />
-                                </button>
-                            )}
-
-                            {/* Mobile Header Title */}
-                            {isMobile && (
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                    <div style={{ width: '32px', height: '32px', background: 'var(--gradient-primary)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}><BookOpen size={20} /></div>
-                                    <span style={{ fontWeight: 'bold', fontSize: '1.1rem', color: 'var(--color-primary-blue)' }}>{BRAND.name}</span>
-                                </div>
-                            )}
-
-                            {!isMobile && (
-                                <div style={{ position: 'relative' }}>
-                                    <Search size={18} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-text-light)' }} />
-                                    <input
-                                        type="text"
-                                        placeholder="Search..."
-                                        style={{
-                                            padding: '0.6rem 1rem 0.6rem 2.5rem',
-                                            borderRadius: '20px',
-                                            border: '1px solid rgba(0,0,0,0.1)',
-                                            background: '#f9fafb',
-                                            width: '300px',
-                                            outline: 'none'
-                                        }}
-                                    />
-                                </div>
-                            )}
-                        </div>
-
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-
-
-                            <div
-                                style={{ position: 'relative', cursor: 'pointer', marginRight: '0.5rem' }}
-                                onClick={() => setShowNotifications(!showNotifications)}
+                <header style={{
+                    background: 'rgba(255, 255, 255, 0.95)',
+                    backdropFilter: 'blur(10px)',
+                    padding: isMobile ? '0.75rem 1rem' : '1rem 2rem',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    position: 'sticky',
+                    top: 0,
+                    zIndex: 40,
+                    borderBottom: '1px solid rgba(0,0,0,0.05)',
+                    height: isMobile ? '60px' : 'auto'
+                }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        {!isMobile && (
+                            <button
+                                onClick={() => setSidebarOpen(!isSidebarOpen)}
+                                style={{ background: 'none', border: 'none', color: 'var(--color-text-light)' }}
                             >
-                                <Bell size={28} color="#4b5563" />
-                                <span style={{
-                                    position: 'absolute', top: '1px', right: '2px',
-                                    width: '10px', height: '10px',
-                                    background: '#ef4444', borderRadius: '50%', border: '2px solid white'
-                                }}></span>
+                                <Menu size={24} />
+                            </button>
+                        )}
+
+                        {/* Mobile Header Title */}
+                        {isMobile && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                <div style={{
+                                    width: '32px',
+                                    height: '32px',
+                                    background: 'var(--gradient-primary)',
+                                    borderRadius: '8px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    color: 'white'
+                                }}>
+                                    <BookOpen size={20} />
+                                </div>
+                                <span style={{ fontWeight: 'bold', fontSize: '1.1rem', color: 'var(--color-primary-blue)' }}>{BRAND.name}</span>
                             </div>
+                        )}
 
-                            {/* Notification Panel */}
-                            <NotificationPanel
-                                isOpen={showNotifications}
-                                onClose={() => setShowNotifications(false)}
-                                role={role}
-                            />
+                        {!isMobile && (
+                            <div style={{ position: 'relative' }}>
+                                <Search size={18} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-text-light)' }} />
+                                <input
+                                    type="text"
+                                    placeholder="Search..."
+                                    style={{
+                                        padding: '0.6rem 1rem 0.6rem 2.5rem',
+                                        borderRadius: '20px',
+                                        border: '1px solid rgba(0,0,0,0.1)',
+                                        background: '#f9fafb',
+                                        width: '300px',
+                                        outline: 'none'
+                                    }}
+                                />
+                            </div>
+                        )}
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        <div
+                            style={{ position: 'relative', cursor: 'pointer', marginRight: '0.5rem' }}
+                            onClick={() => setShowNotifications(!showNotifications)}
+                        >
+                            <Bell size={isMobile ? 24 : 28} color="#4b5563" />
+                            <span style={{
+                                position: 'absolute', top: '1px', right: '2px',
+                                width: '10px', height: '10px',
+                                background: '#ef4444', borderRadius: '50%', border: '2px solid white'
+                            }}></span>
                         </div>
-                    </header>
-                )}
 
-                <div style={{ padding: isMobile ? '1rem' : '2rem' }}>
+                        {/* Notification Panel */}
+                        <NotificationPanel
+                            isOpen={showNotifications}
+                            onClose={() => setShowNotifications(false)}
+                            role={role}
+                        />
+                    </div>
+                </header>
+
+                <div style={{
+                    width: '100%',
+                    maxWidth: isMobile ? '430px' : 'none',
+                    margin: isMobile ? '0 auto' : '0',
+                    padding: isMobile ? '16px' : '2rem',
+                    boxSizing: 'border-box'
+                }}>
                     {children}
                 </div>
             </main>

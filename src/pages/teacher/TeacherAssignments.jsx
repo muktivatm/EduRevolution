@@ -93,7 +93,7 @@ const TeacherAssignments = () => {
 
     return (
         <DashboardLayout role="teacher">
-            <div className="animate-fade-in" style={{ paddingBottom: isMobile ? '100px' : '80px', maxWidth: '800px', margin: '0 auto', padding: isMobile ? '0 1rem' : '0' }}>
+            <div className="animate-fade-in" style={{ paddingBottom: isMobile ? '100px' : '80px', width: '100%' }}>
 
                 {/* Header Section - Hide on Mobile */}
                 {!isMobile && (
@@ -109,13 +109,13 @@ const TeacherAssignments = () => {
                     className="glass-card"
                     style={{
                         width: '100%',
-                        padding: isMobile ? '1rem' : '1.5rem',
+                        padding: '1.5rem',
                         background: 'var(--gradient-primary)',
                         border: 'none',
                         color: 'white',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: isMobile ? '0.75rem' : '1rem',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem',
                         cursor: 'pointer',
-                        marginBottom: isMobile ? '1.5rem' : '2rem',
+                        marginBottom: '1.5rem',
                         transition: 'transform 0.2s',
                         borderRadius: '16px'
                     }}
@@ -208,7 +208,7 @@ const TeacherAssignments = () => {
                 <div style={{ display: 'grid', gap: '1rem' }}>
 
                     {activeTab === 'created' && createdAssignments.map((item) => (
-                        <div key={item.id} className="glass-card" style={{ padding: '1.25rem', borderLeft: '4px solid var(--primary-theme)' }}>
+                        <div key={item.id} className="glass-card" style={{ padding: '1rem', borderLeft: '4px solid var(--primary-theme)' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                                 <span style={{ fontSize: '0.9rem', fontWeight: 'bold', textDecoration: 'underline' }}>{item.class}</span>
                                 <span style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>{item.subject}</span>
@@ -235,7 +235,7 @@ const TeacherAssignments = () => {
 
                     {/* GRANT SUBMISSION TAB */}
                     {activeTab === 'grant' && grantSubmissions.map((item) => (
-                        <div key={item.id} className="glass-card" style={{ padding: '1.25rem', borderLeft: '4px solid #d97706' }}>
+                        <div key={item.id} className="glass-card" style={{ padding: '1rem', borderLeft: '4px solid #d97706' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                                 <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#1f2937' }}>{item.student}</h3>
                                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
@@ -260,7 +260,7 @@ const TeacherAssignments = () => {
 
                     {/* VIEW HISTORY TAB */}
                     {activeTab === 'history' && historySubmissions.map((item) => (
-                        <div key={item.id} className="glass-card" style={{ padding: '1.25rem', borderLeft: '4px solid #10b981', background: '#f9fafb', opacity: 0.9 }}>
+                        <div key={item.id} className="glass-card" style={{ padding: '1rem', borderLeft: '4px solid #10b981', background: '#f9fafb', opacity: 0.9 }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                                 <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#1f2937' }}>{item.student}</h3>
                                 <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>{item.date}</span>

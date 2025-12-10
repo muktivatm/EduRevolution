@@ -37,7 +37,7 @@ const TeacherCommunication = () => {
 
     return (
         <DashboardLayout role="teacher">
-            <div className="animate-fade-in" style={{ height: isMobile ? 'calc(100vh - 90px)' : 'calc(100vh - 100px)', display: 'flex', flexDirection: 'column' }}>
+            <div className="animate-fade-in" style={{ height: isMobile ? 'calc(100vh - 180px)' : 'calc(100vh - 100px)', display: 'flex', flexDirection: 'column' }}>
                 {!isMobile && (
                     <div style={{ marginBottom: '1.5rem' }}>
                         <h1 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#111827' }}>Communication</h1>

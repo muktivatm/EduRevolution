@@ -11,8 +11,7 @@ const TeacherAssessment = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 minHeight: '60vh',
-                textAlign: 'center',
-                padding: '2rem'
+                textAlign: 'center'
             }}>
                 <div style={{
                     background: 'linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%)',

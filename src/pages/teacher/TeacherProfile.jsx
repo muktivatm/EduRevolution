@@ -53,10 +53,10 @@ const TeacherProfile = () => {
                     <p style={{ color: '#6b7280' }}>Manage profile and student requests</p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
 
                     {/* Teacher Details */}
-                    <div className="glass-card" style={{ padding: '2rem' }}>
+                    <div className="glass-card" style={{ padding: '1rem' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
                             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                                 <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: '#ffedd5', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', fontWeight: 'bold', color: '#c2410c' }}>
@@ -86,7 +86,7 @@ const TeacherProfile = () => {
                     </div>
 
                     {/* Leave Requests Management */}
-                    <div className="glass-card" style={{ padding: '2rem' }}>
+                    <div className="glass-card" style={{ padding: '1rem' }}>
                         <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#1f2937', marginBottom: '1.5rem' }}>Student Leave Requests</h3>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
