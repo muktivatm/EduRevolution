@@ -7,29 +7,29 @@ const features = [
         icon: <Users size={32} />,
         title: "Limited Batch Size",
         description: "Personalized attention for every student with small batch sizes ensuring focused learning and individual growth.",
-        color: "var(--color-primary-blue)",
-        bg: "rgba(30, 58, 138, 0.1)"
+        color: "var(--primary-theme)",
+        bg: "var(--primary-theme-light)"
     },
     {
         icon: <Activity size={32} />,
         title: "Real-time Tracking",
         description: "Parents can track attendance, performance, and behavior in real-time through our dedicated portal.",
-        color: "var(--color-secondary-green)",
-        bg: "rgba(16, 185, 129, 0.1)"
+        color: "var(--primary-theme)",
+        bg: "var(--primary-theme-light)"
     },
     {
         icon: <MessageCircle size={32} />,
         title: "Doubt Support",
         description: "We encourage questions! Students can clear their doubts during class or after the lecture. We make sure no student goes home confused.",
-        color: "var(--color-primary-orange)",
-        bg: "rgba(255, 107, 53, 0.1)"
+        color: "var(--primary-theme)",
+        bg: "var(--primary-theme-light)"
     },
     {
         icon: <Trophy size={32} />,
         title: "Result Guarantee",
         description: "We are so confident in our methods that we offer a result improvement guarantee program.",
-        color: "var(--color-secondary-purple)",
-        bg: "rgba(139, 92, 246, 0.1)"
+        color: "var(--primary-theme)",
+        bg: "var(--primary-theme-light)"
     }
 ];
 
