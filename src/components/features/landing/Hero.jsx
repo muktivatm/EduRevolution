@@ -66,7 +66,7 @@ const Hero = () => {
                     </h1>
 
                     <p style={{ fontSize: '1.125rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '500px' }}>
-                        {BRAND.name} combines advanced AI technology with expert mentorship to deliver a personalized learning experience that guarantees results.
+                        {BRAND.name} combines advanced Teaching Methods with expert mentorship to deliver a personalized learning experience that guarantees results.
                     </p>
 
                     <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem' }}>
