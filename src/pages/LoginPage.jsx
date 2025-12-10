@@ -4,7 +4,7 @@ import { User, Users, GraduationCap, ShieldCheck, Phone, ArrowRight, Fingerprint
 import Navbar from '../components/layout/Navbar';
 
 const LoginPage = () => {
-    const [role, setRole] = useState('student');
+    const [role, setRole] = useState('parent');
     const [mobile, setMobile] = useState('');
     const [otpSent, setOtpSent] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -16,10 +16,8 @@ const LoginPage = () => {
     }, []);
 
     const roles = [
-        { id: 'student', label: 'Student', icon: <GraduationCap size={20} /> },
         { id: 'parent', label: 'Parent', icon: <Users size={20} /> },
         { id: 'teacher', label: 'Teacher', icon: <User size={20} /> },
-        { id: 'admin', label: 'Admin', icon: <ShieldCheck size={20} /> },
     ];
 
     const handleSendOtp = (e) => {
@@ -50,7 +48,7 @@ const LoginPage = () => {
                         <p style={{ color: 'var(--color-text-light)' }}>Please select your role to continue</p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem', marginBottom: '2rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
                         {roles.map((r) => (
                             <button
                                 key={r.id}
@@ -117,8 +115,8 @@ const LoginPage = () => {
                             </div>
                         )}
 
-                        <Link to={role === 'parent' ? "/parent/dashboard" : role === 'teacher' ? "/teacher/dashboard" : role === 'admin' ? "/admin/dashboard" : "/student/dashboard"} className="btn-primary" style={{ width: '100%', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                            {otpSent ? 'Login' : 'Send OTP'} <ArrowRight size={20} />
+                        <Link to={role === 'parent' ? "/parent/dashboard" : "/teacher/dashboard"} className="btn-primary" style={{ width: '100%', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                            {otpSent ? 'Login' : 'Continue'} <ArrowRight size={20} />
                         </Link>
                     </form>
 

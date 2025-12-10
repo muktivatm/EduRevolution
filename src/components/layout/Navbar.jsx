@@ -23,13 +23,13 @@ const Navbar = () => {
             width: '95%',
             maxWidth: '1280px',
             zIndex: 1000,
-            padding: '0.75rem 2rem',
+            padding: '0.75rem 1rem',
             borderRadius: '16px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center'
         }}>
-            <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <div style={{
                     width: '40px',
                     height: '40px',
@@ -40,10 +40,10 @@ const Navbar = () => {
                     justifyContent: 'center',
                     color: 'white',
                     fontWeight: 'bold',
-                    fontSize: '1.5rem',
+                    fontSize: '1.25rem',
                     boxShadow: '0 4px 10px rgba(30, 58, 138, 0.3)'
                 }}><BookOpen size={24} /></div>
-                <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary-blue)', fontFamily: 'var(--font-header)' }}>{BRAND.name}</span>
+                <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: 'var(--color-primary-blue)', fontFamily: 'var(--font-header)' }}>{BRAND.name}</span>
             </Link>
 
             {/* Desktop Menu - Hidden on Mobile */}
@@ -80,7 +80,7 @@ const Navbar = () => {
                     textDecoration: 'none',
                     color: 'white',
                     background: 'var(--color-primary-blue)',
-                    padding: '0.5rem 1.25rem',
+                    padding: '0.5rem 1rem',
                     borderRadius: '20px',
                     fontSize: '0.9rem',
                     fontWeight: '600',

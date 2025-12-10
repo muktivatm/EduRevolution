@@ -101,16 +101,38 @@ const RegisterPage = () => {
                             </div>
 
                             <div style={{ marginBottom: '2rem' }}>
-                                <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', fontWeight: '500' }}>Password</label>
+                                <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', fontWeight: '500' }}>Select Yourself</label>
                                 <div style={{ position: 'relative' }}>
-                                    <Lock size={18} style={{ position: 'absolute', left: '0.75rem', top: '50%', transform: 'translateY(-50%)', color: '#9ca3af' }} />
-                                    <input type="password" placeholder="Create a strong password" style={{ width: '100%', padding: '0.75rem 0.75rem 0.75rem 2.5rem', borderRadius: '8px', border: '1px solid #e5e7eb', outline: 'none' }} />
+                                    <User size={18} style={{ position: 'absolute', left: '0.75rem', top: '50%', transform: 'translateY(-50%)', color: '#9ca3af', pointerEvents: 'none', zIndex: 1 }} />
+                                    <select
+                                        style={{
+                                            width: '100%',
+                                            padding: '0.75rem 0.75rem 0.75rem 2.5rem',
+                                            borderRadius: '8px',
+                                            border: '1px solid #e5e7eb',
+                                            outline: 'none',
+                                            appearance: 'none',
+                                            backgroundColor: 'white',
+                                            cursor: 'pointer',
+                                            fontSize: '1rem'
+                                        }}
+                                    >
+                                        <option value="">Select</option>
+                                        <option value="parent">Parents</option>
+                                        <option value="student">Student</option>
+                                    </select>
+                                    <ArrowRight size={18} style={{ position: 'absolute', right: '0.75rem', top: '50%', transform: 'translateY(-50%) rotate(90deg)', color: '#9ca3af', pointerEvents: 'none' }} />
                                 </div>
                             </div>
 
-                            <Link to="/login" className="btn-primary" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                                Go to Admission form  <ArrowRight size={18} />
-                            </Link>
+                            <button
+                                type="button"
+                                onClick={(e) => e.preventDefault()}
+                                className="btn-primary"
+                                style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', border: 'none', cursor: 'pointer' }}
+                            >
+                                Admission Inquiry form  <ArrowRight size={18} />
+                            </button>
                         </form>
 
                         <div style={{ textAlign: 'center', marginTop: '2rem' }}>

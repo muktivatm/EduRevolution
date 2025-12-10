@@ -50,7 +50,7 @@ const TeacherSubmissionDetail = () => {
 
     return (
         <DashboardLayout role="teacher">
-            <div className="animate-fade-in" style={{ maxWidth: '800px', margin: '0 auto', paddingBottom: '2rem' }}>
+            <div className="animate-fade-in" style={{ width: '100%', margin: '0 auto' }}>
 
                 {/* Header with Back Button */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
@@ -68,11 +68,11 @@ const TeacherSubmissionDetail = () => {
                 </div>
 
                 {/* Main Content Card */}
-                <div className="glass-card" style={{ padding: '0', overflow: 'hidden', borderRadius: isMobile ? '16px' : '24px' }}>
+                <div className="glass-card" style={{ padding: '0', overflow: 'hidden', borderRadius: '16px' }}>
 
                     {/* Student Info Header */}
                     <div style={{
-                        padding: isMobile ? '1rem' : '1.5rem',
+                        padding: '1rem',
                         background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
                         borderBottom: '1px solid #e5e7eb'
                     }}>
@@ -110,9 +110,9 @@ const TeacherSubmissionDetail = () => {
                     </div>
 
                     {/* Submission Details */}
-                    <div style={{ padding: isMobile ? '1rem' : '1.5rem' }}>
+                    <div style={{ padding: '1rem' }}>
 
-                        <div style={{ display: 'grid', gap: isMobile ? '1rem' : '1.5rem', marginBottom: isMobile ? '1.5rem' : '2rem' }}>
+                        <div style={{ display: 'grid', gap: '1rem', marginBottom: '1.5rem' }}>
 
                             {/* Assignment Info */}
                             <div>
@@ -207,7 +207,7 @@ const TeacherSubmissionDetail = () => {
                 </div>
 
                 {/* Coming Soon / Advertisement Card */}
-                <div style={{ marginTop: '2rem', padding: '1.25rem', borderRadius: '20px', background: 'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)', color: 'white', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(99, 102, 241, 0.4)' }}>
+                <div style={{ marginTop: '2rem', padding: '1rem', borderRadius: '20px', background: 'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)', color: 'white', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(99, 102, 241, 0.4)' }}>
                     <div style={{ position: 'relative', zIndex: 1 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                             <div style={{ background: 'rgba(255,255,255,0.2)', padding: '0.4rem', borderRadius: '10px' }}>

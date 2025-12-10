@@ -17,7 +17,7 @@ const TeacherMore = () => {
 
     return (
         <DashboardLayout role="teacher">
-            <div className="animate-fade-in" style={{ maxWidth: '1000px', margin: '0 auto', paddingBottom: '2rem' }}>
+            <div className="animate-fade-in" style={{ maxWidth: '1000px', margin: '0 auto' }}>
                 {/* Coming Soon Hero Section */}
                 <div style={{
                     minHeight: '25vh', // Significantly reduced
@@ -57,10 +57,10 @@ const TeacherMore = () => {
                     </span>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '0.75rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '1rem' }}>
                     {menuItems.map((item, index) => (
                         <div key={index} className="glass-card" style={{
-                            padding: '0.75rem 1rem',
+                            padding: '1rem',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '1rem',
@@ -73,6 +73,12 @@ const TeacherMore = () => {
                             onClick={() => {
                                 if (item.label === 'Logout') {
                                     navigate('/login');
+                                } else if (item.label === 'My Profile') {
+                                    navigate('/teacher/profile');
+                                } else if (item.label === 'Assessment') {
+                                    navigate('/teacher/assessment');
+                                } else if (item.label === 'Communication') {
+                                    navigate('/teacher/communication');
                                 }
                             }}
                         >

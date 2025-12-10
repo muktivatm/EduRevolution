@@ -23,7 +23,7 @@ const BottomNav = ({ navItems }) => {
             alignItems: 'center',
             zIndex: 100,
             boxShadow: '0 -4px 20px rgba(0,0,0,0.05)',
-            paddingBottom: 'safe-area-inset-bottom' // For iPhone X+
+            paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom, 0px))' // Ensure safe area spacing
         }}>
             {navItems.slice(0, 5).map((item, index) => { // Limit to 5 items for mobile
                 const isActive = location.pathname === item.path || location.pathname === item.to;

@@ -26,7 +26,7 @@ const TeacherCommunication = () => {
 
     const students = users.filter(u => u.role === 'student').map(s => ({ ...s, subtext: s.class }));
     const admins = users.filter(u => u.role === 'admin').map(a => ({ ...a, subtext: a.tag }));
-    const parents = users.filter(u => u.role === 'parent').map(p => ({ ...p, subtext: `Parent of ${p.childClass} Student` }));
+    const parents = users.filter(u => u.role === 'parent').map(p => ({ ...p, subtext: p.childNames ? `${p.childNames}'s parents from Class-${p.childClass}` : `Parent of ${p.childClass} Student` }));
 
     const contactsMap = {
         'Classes': classes,
@@ -37,7 +37,7 @@ const TeacherCommunication = () => {
 
     return (
         <DashboardLayout role="teacher">
-            <div className="animate-fade-in" style={{ height: isMobile ? 'calc(100vh - 90px)' : 'calc(100vh - 100px)', display: 'flex', flexDirection: 'column' }}>
+            <div className="animate-fade-in" style={{ height: isMobile ? 'calc(100vh - 180px)' : 'calc(100vh - 100px)', display: 'flex', flexDirection: 'column' }}>
                 {!isMobile && (
                     <div style={{ marginBottom: '1.5rem' }}>
                         <h1 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#111827' }}>Communication</h1>
@@ -48,7 +48,7 @@ const TeacherCommunication = () => {
                 <div style={{ flex: 1, minHeight: 0 }}>
                     <ChatInterface
                         currentUser={currentUser}
-                        initialTab="Classes"
+                        initialTab="Parents"
                         contactsMap={contactsMap}
                         initialContactId={contactId}
                     />

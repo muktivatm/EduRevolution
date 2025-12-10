@@ -211,6 +211,11 @@ const ChatInterface = ({ currentUser, initialTab, contactsMap, initialContactId 
                                     />
                                     <div>
                                         <h3 style={{ fontWeight: 'bold', color: '#1f2937' }}>{selectedContact.name}</h3>
+                                        {selectedContact.role === 'parent' && selectedContact.childNames && selectedContact.childClass && (
+                                            <p style={{ fontSize: '0.75rem', color: '#6b7280', fontStyle: 'italic', marginTop: '0.15rem' }}>
+                                                Parents of {selectedContact.childNames} from Class-{selectedContact.childClass}
+                                            </p>
+                                        )}
                                         {selectedContact.tag && (
                                             <span style={{ fontSize: '0.75rem', padding: '0.1rem 0.5rem', background: '#dbeafe', color: '#1e40af', borderRadius: '4px' }}>
                                                 {selectedContact.tag}
