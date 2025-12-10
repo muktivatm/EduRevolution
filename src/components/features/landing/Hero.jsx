@@ -2,7 +2,10 @@ import { ArrowRight, Play, Users, Award, BookOpen } from 'lucide-react';
 import { BRAND } from '../../../branding';
 import { useState, useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 const Hero = () => {
+    const navigate = useNavigate();
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     useEffect(() => {
@@ -99,15 +102,20 @@ const Hero = () => {
                         gap: '1rem',
                         marginBottom: isMobile ? '2rem' : '3rem'
                     }}>
-                        <button className="btn-primary" style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '0.5rem',
-                            padding: isMobile ? '0.85rem 1.5rem' : '1rem 2rem',
-                            fontSize: isMobile ? '0.95rem' : '1.1rem',
-                            width: isMobile ? '100%' : 'auto'
-                        }}>
+                        <button
+                            className="btn-primary"
+                            onClick={() => navigate('/register')}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                gap: '0.5rem',
+                                padding: isMobile ? '0.85rem 1.5rem' : '1rem 2rem',
+                                fontSize: isMobile ? '0.95rem' : '1.1rem',
+                                width: isMobile ? '100%' : 'auto',
+                                cursor: 'pointer'
+                            }}
+                        >
                             Start Your Journey <ArrowRight size={isMobile ? 18 : 20} />
                         </button>
                         {!isMobile && (
