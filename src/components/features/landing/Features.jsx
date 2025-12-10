@@ -1,12 +1,12 @@
 import React from 'react';
-import { Brain, Activity, MessageCircle, Trophy } from 'lucide-react';
+import { Users, Activity, MessageCircle, Trophy } from 'lucide-react';
 import { BRAND } from '../../../branding';
 
 const features = [
     {
-        icon: <Brain size={32} />,
-        title: "AI-Powered Learning",
-        description: "Personalized study paths adapted to your learning style and pace using advanced AI algorithms.",
+        icon: <Users size={32} />,
+        title: "Limited Batch Size",
+        description: "Personalized attention for every student with small batch sizes ensuring focused learning and individual growth.",
         color: "var(--color-primary-blue)",
         bg: "rgba(30, 58, 138, 0.1)"
     },
@@ -19,8 +19,8 @@ const features = [
     },
     {
         icon: <MessageCircle size={32} />,
-        title: "24x7 Doubt Support",
-        description: "Get instant answers to your questions anytime, anywhere with our AI tutor and expert teachers.",
+        title: "Doubt Support",
+        description: "We encourage questions! Students can clear their doubts during class or after the lecture. We make sure no student goes home confused.",
         color: "var(--color-primary-orange)",
         bg: "rgba(255, 107, 53, 0.1)"
     },

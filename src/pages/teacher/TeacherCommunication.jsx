@@ -26,7 +26,7 @@ const TeacherCommunication = () => {
 
     const students = users.filter(u => u.role === 'student').map(s => ({ ...s, subtext: s.class }));
     const admins = users.filter(u => u.role === 'admin').map(a => ({ ...a, subtext: a.tag }));
-    const parents = users.filter(u => u.role === 'parent').map(p => ({ ...p, subtext: `Parent of ${p.childClass} Student` }));
+    const parents = users.filter(u => u.role === 'parent').map(p => ({ ...p, subtext: p.childNames ? `${p.childNames}'s parents from Class-${p.childClass}` : `Parent of ${p.childClass} Student` }));
 
     const contactsMap = {
         'Classes': classes,
@@ -48,7 +48,7 @@ const TeacherCommunication = () => {
                 <div style={{ flex: 1, minHeight: 0 }}>
                     <ChatInterface
                         currentUser={currentUser}
-                        initialTab="Classes"
+                        initialTab="Parents"
                         contactsMap={contactsMap}
                         initialContactId={contactId}
                     />

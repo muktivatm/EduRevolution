@@ -7,10 +7,10 @@ export const useChat = () => useContext(ChatContext);
 export const ChatProvider = ({ children }) => {
     // Mock Users Database
     const [users] = useState([
-        { id: 'parent1', name: 'Mr. Sharma', role: 'parent', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', childClass: '10-A' },
+        { id: 'parent1', name: 'Mr. Sharma', role: 'parent', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', childClass: '10-A', childNames: 'Rahul and Riya' },
         { id: 'student1', name: 'Rahul Sharma', role: 'student', avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', class: '10-A' },
         { id: 'teacher1', name: 'Mr. Verma', role: 'teacher', subject: 'Maths', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', classes: ['10-A', '9-B'] },
-        { id: 'teacher2', name: 'Mrs. Gupta', role: 'teacher', subject: 'English', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', classes: ['10-A'] },
+        { id: 'teacher2', name: 'Mrs. Gupta', role: 'teacher', subject: 'Physics', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', classes: ['10-A'] },
         { id: 'admin1', name: 'Admin User', role: 'admin', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', tag: 'Principal Office' }
     ]);
 

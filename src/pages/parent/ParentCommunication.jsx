@@ -9,7 +9,7 @@ const ParentCommunication = () => {
     const location = useLocation();
 
     // State
-    const [activeTab, setActiveTab] = useState('All');
+    const [activeTab, setActiveTab] = useState('Teacher');
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedContact, setSelectedContact] = useState(null);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -107,7 +107,10 @@ const ParentCommunication = () => {
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <p style={{ fontSize: '0.9rem', color: '#6b7280', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '85%' }}>
-                            {lastMsg ? lastMsg.text : <span style={{ fontStyle: 'italic', color: '#9ca3af' }}>Start a conversation</span>}
+                            {contact.role === 'teacher' && contact.subject ?
+                                `${contact.subject} Teacher` :
+                                (lastMsg ? lastMsg.text : <span style={{ fontStyle: 'italic', color: '#9ca3af' }}>Start a conversation</span>)
+                            }
                         </p>
                         {/* Mock Unread Badge */}
                         {lastMsg && lastMsg.senderId !== parentUser.id && (
