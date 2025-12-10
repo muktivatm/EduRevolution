@@ -109,7 +109,7 @@ const RegisterPage = () => {
                             </div>
 
                             <Link to="/login" className="btn-primary" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                                Create Account <ArrowRight size={18} />
+                                Go to Admission form  <ArrowRight size={18} />
                             </Link>
                         </form>
 

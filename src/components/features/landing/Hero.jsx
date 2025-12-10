@@ -62,7 +62,7 @@ const Hero = () => {
                     <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
                         Transform Your <br />
                         <span className="text-gradient">Learning Journey</span> <br />
-                        with AI Power
+                        with Us
                     </h1>
 
                     <p style={{ fontSize: '1.125rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '500px' }}>
