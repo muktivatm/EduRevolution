@@ -1,5 +1,5 @@
 export const BRAND = {
-    name: "Taksh Academy",
-    color: "hsla(236, 100%, 50%, 1.00)",
-    phone: "+91 98765 43210"
+    name: "Samarth Institute",
+    color: "hsla(236, 100%, 50%, 0.99)",
+    phone: "+91 9624225939"
 };

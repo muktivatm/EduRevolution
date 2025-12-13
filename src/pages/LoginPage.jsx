@@ -16,14 +16,26 @@ const LoginPage = () => {
     }, []);
 
     const roles = [
+        { id: 'student', label: 'Student', icon: <GraduationCap size={20} /> },
         { id: 'parent', label: 'Parent', icon: <Users size={20} /> },
         { id: 'teacher', label: 'Teacher', icon: <User size={20} /> },
+        { id: 'admin', label: 'Admin', icon: <ShieldCheck size={20} /> },
     ];
 
     const handleSendOtp = (e) => {
         e.preventDefault();
         if (mobile.length >= 10) {
             setOtpSent(true);
+        }
+    };
+
+    const getDashboardLink = () => {
+        switch (role) {
+            case 'parent': return "/parent/dashboard";
+            case 'teacher': return "/teacher/dashboard";
+            case 'student': return "/student/dashboard";
+            case 'admin': return "/admin/dashboard";
+            default: return "/parent/dashboard";
         }
     };
 
@@ -48,7 +60,7 @@ const LoginPage = () => {
                         <p style={{ color: 'var(--color-text-light)' }}>Please select your role to continue</p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem', marginBottom: '2rem' }}>
                         {roles.map((r) => (
                             <button
                                 key={r.id}
@@ -58,7 +70,7 @@ const LoginPage = () => {
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     gap: '0.5rem',
-                                    padding: '1rem 0.5rem',
+                                    padding: '0.75rem 0.25rem',
                                     background: role === r.id ? 'var(--color-primary-blue)' : 'rgba(255,255,255,0.5)',
                                     color: role === r.id ? 'white' : 'var(--color-text-dark)',
                                     border: 'none',
@@ -115,7 +127,7 @@ const LoginPage = () => {
                             </div>
                         )}
 
-                        <Link to={role === 'parent' ? "/parent/dashboard" : "/teacher/dashboard"} className="btn-primary" style={{ width: '100%', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                        <Link to={getDashboardLink()} className="btn-primary" style={{ width: '100%', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                             {otpSent ? 'Login' : 'Continue'} <ArrowRight size={20} />
                         </Link>
                     </form>
