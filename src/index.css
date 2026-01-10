@@ -1,9 +1,10 @@
 :root {
   /* Primary Colors */
-  --primary-theme: #3B82F6;
+  --primary-theme: #1E3A8A;
   /* Fallback */
-  --color-primary-blue: var(--primary-theme);
-  --color-primary-orange: var(--primary-theme);
+  --color-primary-blue: #1E3A8A;
+  --color-primary-orange: #DC2626;
+  /* Using Red as the accent/action color */
   --color-primary-white: #FFFFFF;
 
   /* Secondary Colors */
@@ -27,9 +28,9 @@
   --glass-blur: blur(8px);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--primary-theme) 0%, var(--primary-theme) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--primary-theme) 0%, var(--primary-theme) 100%);
-  --gradient-bg: linear-gradient(to right bottom, #f0f9ff, #e0f2fe, #dbeafe);
+  --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+  --gradient-accent: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+  --gradient-bg: linear-gradient(to right bottom, #EFF6FF, #DBEAFE, #BFDBFE);
 }
 
 * {

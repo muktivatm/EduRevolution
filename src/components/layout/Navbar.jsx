@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Globe, BookOpen } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { BRAND } from '../../branding';
+
+import Logo from '../common/Logo';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [lang, setLang] = useState('EN');
+
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     useEffect(() => {
@@ -15,59 +17,34 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="glass-card" style={{
+        <nav style={{
             position: 'fixed',
-            top: '1rem',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '95%',
-            maxWidth: '1280px',
+            top: '0',
+            left: '0',
+            width: '100%',
             zIndex: 1000,
-            padding: '0.75rem 1rem',
-            borderRadius: '16px',
+            padding: isMobile ? '0.5rem 1rem' : '0.75rem 2rem',
+            background: 'white',
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center'
         }}>
-            <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{
-                    width: '40px',
-                    height: '40px',
-                    background: 'var(--gradient-primary)',
-                    borderRadius: '10px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '1.25rem',
-                    boxShadow: '0 4px 10px rgba(30, 58, 138, 0.3)'
-                }}><BookOpen size={24} /></div>
-                <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: 'var(--color-primary-blue)', fontFamily: 'var(--font-header)' }}>{BRAND.name}</span>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+                <Logo isMobile={isMobile} />
             </Link>
 
             {/* Desktop Menu - Hidden on Mobile */}
             {!isMobile ? (
                 <div className="desktop-menu" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
                     <Link to="/" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Home</Link>
-                    <span style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s', cursor: 'pointer' }}>About Us</span>
-                    <span style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s', cursor: 'pointer' }}>Features</span>
-                    <span style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s', cursor: 'pointer' }}>Pricing</span>
+                    <Link to="/courses" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Courses</Link>
+                    <Link to="/gallery" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Gallery</Link>
+                    <Link to="/results" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Results</Link>
+                    <Link to="/about" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>About</Link>
+                    <Link to="/contact" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Contact</Link>
 
-                    <button onClick={() => setLang(lang === 'EN' ? 'HI' : 'EN')} style={{
-                        background: 'rgba(255,255,255,0.5)',
-                        border: '1px solid rgba(0,0,0,0.1)',
-                        borderRadius: '20px',
-                        padding: '0.25rem 0.75rem',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.25rem',
-                        color: 'var(--color-text-dark)',
-                        fontSize: '0.9rem'
-                    }}>
-                        <Globe size={16} />
-                        {lang}
-                    </button>
+
 
                     <div style={{ display: 'flex', gap: '1rem' }}>
                         <Link to="/login" className="btn-secondary" style={{ textDecoration: 'none', padding: '0.5rem 1.5rem' }}>Login</Link>
